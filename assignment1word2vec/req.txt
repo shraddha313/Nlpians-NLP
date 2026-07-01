@@ -1,24 +1,49 @@
 -------------------------Assignment -1 ------------------------
 
-1.First we have to prepare dataset take 3000 doc for train and 1000 doc for test from computer sciecne domain 
+1. Dataset Preparation
 
 
-2.we have to clean data..(i) stopwords, (ii) urls, (iii) bullets, (iv) apostrophe, (v) hyphens, (vi) enumerations (eg. like how this list is being enumerated), (vii), numerical-to-text conversion, (viii) punctuations.
+3000 documents collected for training and 1000 documents for testing, all from the Computer Science domain.
 
 
-3. take count of valid word and essentially "Invalid " and "invalid" are same we have to make our daatbase case insensetive
+2. Data Cleaning
+
+Each document is cleaned through the following steps:
 
 
-4. after doing this preare input and output and tf-idf matrix 
-where input matrix will contain 1 in prence of target sentence's words 
-where output matrix will contain 1 in presence of contex sentecne 's words 
-tf-idf matrix take each sentence as a document find idf for count take acciunt of whole contex window words 
+Removal of stopwords
+Removal of URLs
+Removal of bullet points
+Handling of apostrophes
+Handling of hyphens
+Removal of enumerations (e.g., ordered/unordered list markers)
+Numerical-to-text conversion (e.g., converting digits into their word form)
+Removal of punctuation
 
 
-
-5. we wil forward pass using activation function softmax 
-and use loss as negative log likelihood 
-and alos update contex  and target matrix embeding  
+3. Case-Insensitive Vocabulary
 
 
-6.for evaluating use cosine simaliarity 
+Word counts are normalized so that variations like "Invalid" and "invalid" are treated as the same token, ensuring a case-insensitive vocabulary/database.
+
+
+4. Input, Output & TF-IDF Matrix Construction
+
+
+Input matrix — marks a 1 for the presence of the target word in a given sentence.
+Output matrix — marks a 1 for the presence of context words surrounding the target word.
+TF-IDF matrix — each sentence is treated as a "document" to compute IDF, accounting for all words within the defined context window.
+
+
+5. Model Training
+
+
+A forward pass is computed using the softmax activation function.
+Loss function: Negative Log-Likelihood (NLL).
+Both the context embedding matrix and target embedding matrix are updated during training via backpropagation.
+
+
+6. Evaluation
+
+
+Model performance and word similarity are evaluated using Cosine Similarity between learned word embeddings. 
