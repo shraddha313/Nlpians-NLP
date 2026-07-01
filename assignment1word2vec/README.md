@@ -6,17 +6,6 @@ This project was built as part of **Assignment 1**, focused on understanding wor
 
 ---
 
-## 📁 Repository Structure
-
-| File | Description |
-|---|---|
-| `new.txt` | Training data (3000 documents from the Computer Science domain) |
-| `testdata.txt` | Test data (1000 documents from the Computer Science domain) |
-| `req.txt` | Basic flow / requirements outlining the pipeline of the project |
-| `clean.ipynb` | Notebook containing the data cleaning pipeline for the test data |
-| `final.ipynb` | Notebook containing the custom Word2Vec model implementation |
-
----
 
 
 
