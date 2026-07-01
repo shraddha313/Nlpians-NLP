@@ -4,7 +4,7 @@ A custom implementation of the Word2Vec model built from scratch — including d
 
 This project was built as part of **Assignment 1**, focused on understanding word embeddings at a fundamental level rather than using pre-built libraries like Gensim.
 
-## 🚀 Getting Started
+##  Getting Started
 
 1. Clone the repository:
    ```bash
